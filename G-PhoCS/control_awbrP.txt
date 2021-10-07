@@ -1,0 +1,96 @@
+GENERAL-INFO-START
+        seq-file KeepLoci.gphocs
+        trace-file Trace_awbrP63.log
+        mcmc-iterations 300000
+        random-seed 63
+        #
+        find-finetunes  TRUE
+        find-finetunes-samples-per-step 1000
+        tau-theta-alpha 1.0
+        tau-theta-beta  100 # per pop as theta and tau have diff means
+        tau-theta-print 100
+
+        start-mig      1
+        mig-rate-alpha 0.002
+        mig-rate-beta  .00001
+        mig-rate-print 0.1
+GENERAL-INFO-END
+CURRENT-POPS-START
+        POP-START
+                name Cydno
+                samples Cy_PA1 d Cy_PA2 d
+        POP-END 
+        POP-START
+                name NumataA
+                samples Nu_Arc_PR2 d Nu_Aur_PR2 d
+        POP-END
+        POP-START
+                        name NumataB
+                samples Nu_BR2 d Nu_BR4 d
+        POP-END
+        POP-START
+                name Pardalinus
+                samples Pa_Ssp_PR1 d Pa_Ssp_PR3 d
+        POP-END
+        POP-START
+                name Elevatus
+                samples El_PR1 d El_PR3 d
+        POP-END
+        POP-START
+                name Ismenius
+                samples Is_Bou_PA2 d Is_Bou_PA3 d
+        POP-END
+CURRENT-POPS-END
+ANCESTRAL-POPS-START
+        POP-START
+                name Numata
+                tau-initial 0.00002
+                children NumataA NumataB
+        POP-END
+        POP-START
+                name PE
+                tau-initial 0.00001
+                children Pardalinus Elevatus
+        POP-END
+        POP-START
+                name IN
+                tau-initial 0.00002
+                children Ismenius Numata
+        POP-END
+        POP-START
+                name PEIN
+                tau-initial 0.00003
+                children PE IN
+        POP-END
+        POP-START
+                name CPEIN
+                tau-initial 0.0003
+                children PEIN Cydno 
+        POP-END
+ANCESTRAL-POPS-END
+MIG-BANDS-START
+        BAND-START
+                source NumataA
+                target Pardalinus
+        BAND-END
+        BAND-START
+                source Pardalinus
+                target NumataA
+        BAND-END
+        BAND-START
+                source NumataB
+                target Pardalinus
+        BAND-END
+        BAND-START
+                source Pardalinus
+                target NumataB
+        BAND-END
+        BAND-START
+                source Pardalinus
+                target Ismenius
+        BAND-END
+        BAND-START
+                source Ismenius
+                target Pardalinus
+        BAND-END
+MIG-BANDS-END
