@@ -1,4 +1,4 @@
-Scripts used to obtain Fst in all H. numata populations.
+Scripts used to obtain Fst and Pi in all H. numata populations.
 It requires a vcf file with at least all individuals in AllPopulationsBCF.txt and four folders where output will be stored for each scaffold (vcfAll/ genoAll/ filterAll/ and 0csvAll).
 Firstly, we ran FstNumata.sh, which requires bcftools, python and Simon Martin's scripts from https://github.com/simonhmartin/genomics_general
 
