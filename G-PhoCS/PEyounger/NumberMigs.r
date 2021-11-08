@@ -1,0 +1,15 @@
+datos=read.table(file="6576.log",header=TRUE)
+#
+#
+print(paste("datos$m_PEIN..Cydno*theta_PEIN",mean(datos$m_PEIN..Cydno*datos$theta_PEIN/10)))
+print(paste("datos$m_Cydno..PEIN*theta_Cydno",mean(datos$m_Cydno..PEIN*datos$theta_PEICydno/10)))
+#
+print(paste("datos$m_Ismenius..Numata*theta_Ismenius",mean(datos$m_Numata..Ismenius*datos$theta_Numata/10)))
+print(paste("datos$m_Numata..Ismenius*theta_Numata",mean(datos$m_Ismenius..Numata*datos$theta_Ismenius/10)))
+#
+print(paste("datos$m_PE..Numata*theta_PE",mean(datos$m_Numata..PE*datos$theta_Numata/10)))
+print(paste("datos$m_Numata..PE*theta_Numata",mean(datos$m_PE..Numata*datos$theta_PE/10)))
+#
+print(paste("datos$m_PE..NumataA*theta_PE",mean(datos$m_NumataA..PE*datos$theta_NumataA/10)))
+print(paste("datos$m_NumataA..PE*theta_NumataA",mean(datos$m_PE..NumataA*datos$theta_PE/10)))
+#

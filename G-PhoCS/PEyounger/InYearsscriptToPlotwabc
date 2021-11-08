@@ -1,0 +1,20 @@
+ set arrow from            0 ,   2.0294809910229597E-002  to            0 ,   1.9328391268456299E-002  lw    2.4333364513322597       nohead
+ set arrow from            0 ,   1.9328391268456299E-002  to          -10 ,   4.9999998882412910E-003  lw    4.0358111497807503       nohead
+ set arrow from            0 ,   1.9328391268456299E-002  to            5 ,   1.9326845801729001E-002  lw    1.9417756116030600       nohead
+ set arrow from            5 ,   1.9326845801729001E-002  to           10 ,   1.8346381701908498E-002  lw    2.4113916249081200       nohead
+ set arrow from            5 ,   1.9326845801729001E-002  to            3 ,   1.0405159531547701E-002  lw    5.2240104308271498       nohead
+ set arrow from           10 ,   1.8346381701908498E-002  to           15 ,   1.0926191031955201E-002  lw    3.7893238518442596       nohead
+ set arrow from           15 ,   1.0926191031955201E-002  to           20 ,   4.9999998882412910E-003  lw    17.220844981749899       nohead
+ set arrow from           15 ,   1.0926191031955201E-002  to           16 ,   4.9999998882412910E-003  lw   0.87025655778278899       nohead
+ set arrow from           10 ,   1.8346381701908498E-002  to           10 ,   4.9999998882412910E-003  lw   0.75300721683608396       nohead
+ set arrow from            3 ,   1.0405159531547701E-002  to            1 ,   4.9999998882412910E-003  lw    7.8501509806799001       nohead
+ set arrow from            3 ,   1.0405159531547701E-002  to            5 ,   4.9999998882412910E-003  lw    11.927817825139101       nohead
+  set format x ''
+  set xtics scale 0
+  set style textbox opaque
+ set ytics nomirror
+ set border 10
+ set ylabel "Time (coalescent units)"
+ set y2label "Time (years)"
+ set y2tics ("2543209."   1.9328391268456299E-002 ,"2543006."   1.9326845801729001E-002 ,"2413998."   1.8346381701908498E-002 ,"1437657."   1.0926191031955201E-002 ,"1369100."   1.0405159531547701E-002 )
+ p "InYearsToPlotwabc" u 1:2:(0.15) w circles notitle, ""  u 1:2 w l notitle,  "< awk  '{if ($2 <    1.0405159531547701E-002 ) print }' InYearsToPlotwabc "  u 1:2:3 w labels offset 3.8,0 notitle, ''  u 1:2:(sprintf('%.g',$4)) w labels center boxed offset 0,1 notitle,  "< awk  '{if ($2 >=   1.0405159531547701E-002  && $4 > 0) print }' InYearsToPlotwabc" u 1:2:(sprintf('%.g',$4)) w labels center boxed  notitle
