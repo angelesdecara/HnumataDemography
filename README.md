@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/414560525.svg)](https://zenodo.org/badge/latestdoi/414560525)
+
 # Demographic history and (lack of) isolation by distance in H. numata
 Scripts and tools to analyse demographic history and isolation by distance (or lack of) in *Heliconius numata*, as described in
 https://www.biorxiv.org/content/10.1101/2021.09.29.462348v1
